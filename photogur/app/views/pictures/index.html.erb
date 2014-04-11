@@ -1,7 +1,11 @@
-<h1>Pictures</h1>
+<h2>Most Recent Pictures</h2>
 <%= link_to "New Picture", "/pictures/new" %>
 
-<% @pictures.each do |picture| %>
-	<p><%= picture[:title] %>,<%= picture[:artist] %></p>
-	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
-<% end %>
+
+<ul>
+	<% @most_recent_pictures.each do |picture| %>
+		<li><%= link_to "#{picture.title}", "pictures/#{picture.id}" %></li>
+
+	<% end %>
+</ul>
+

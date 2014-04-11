@@ -2,3 +2,8 @@
 
 <p><%= @picture[:title] %>, <%= @picture[:artist] %></p>
 <%= image_tag @picture.url %>
+
+<p><% @comments.each do |comment| %>
+	<%= comment.author %>
+	<%= comment.content %>
+<% end %></p>
