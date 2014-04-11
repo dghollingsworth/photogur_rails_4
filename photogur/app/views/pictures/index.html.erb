@@ -9,3 +9,9 @@
 	<% end %>
 </ul>
 
+<ul>
+	<% @created_before.each do |picture| %>
+	<li><%= link_to "#{picture.title}", "pictures/#{picture.id}" %></li>
+	<% end %>
+</ul>
+<p>Total Number Older than 1 mth: <%= @created_before.count %></p>

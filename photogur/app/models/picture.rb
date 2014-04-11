@@ -5,3 +5,4 @@ class Picture < ActiveRecord::Base
 	scope :created_before, ->(time) { where("created_at < ?", time) }
 end
 
+	
